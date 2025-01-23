@@ -1,50 +1,114 @@
-const attorneys = [
+import { User, Users, Phone, Mail, MapPin } from "lucide-react";
+
+const teamMembers = [
   {
-    name: "John Smith",
-    title: "Senior Partner",
-    image: "/placeholder.svg",
-    specialization: "Corporate Law",
+    category: "KURUCUMUZ",
+    members: [
+      {
+        name: "Av. Gülten AYANA",
+        title: "Ankara Barosu Sicil No:8752",
+      }
+    ]
   },
   {
-    name: "Sarah Johnson",
-    title: "Partner",
-    image: "/placeholder.svg",
-    specialization: "Civil Litigation",
+    category: "AVUKATLARIMIZ",
+    members: [
+      {
+        name: "Av. Serdıl AY",
+        title: "Ankara 1 Nolu Barosu / Sicil No: 43437",
+      },
+      {
+        name: "Stajyer Av. Erkan AĞIN",
+        title: "Ankara Barosu",
+      }
+    ]
   },
   {
-    name: "Michael Brown",
-    title: "Associate",
-    image: "/placeholder.svg",
-    specialization: "Family Law",
-  },
+    category: "EKİP ÜYELERİMİZ",
+    members: [
+      {
+        name: "Gülcan KUNAR",
+        title: "Genel Koordinatör",
+      },
+      {
+        name: "Rahime Gül SEVİL",
+        title: "Call Center (İcra Takip Sorumlusu)",
+      },
+      {
+        name: "Gökçe GÜRHAN",
+        title: "Call Center (İcra Takip Sorumlusu)",
+      }
+    ]
+  }
+];
+
+const contactInfo = [
+  { icon: Phone, text: "0312 435 38 49 / 0312 433 66 23" },
+  { icon: Phone, text: "0533 068 55 16" },
+  { icon: Mail, text: "gultenayana@ayana.av.tr" },
+  { icon: MapPin, text: "Çukurambar Mah. Öğretmenler Cad. Kardelen Apt. No: 5/5 Çukurambar Ankara / TÜRKİYE" }
 ];
 
 const Team = () => {
   return (
-    <section id="team" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-serif text-center text-primary mb-12">
-          Our Team
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {attorneys.map((attorney) => (
-            <div
-              key={attorney.name}
-              className="bg-secondary p-6 rounded-lg text-center group hover:shadow-lg transition-shadow"
-            >
-              <img
-                src={attorney.image}
-                alt={attorney.name}
-                className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-serif text-primary mb-1">{attorney.name}</h3>
-              <p className="text-accent font-medium mb-2">{attorney.title}</p>
-              <p className="text-gray-600">{attorney.specialization}</p>
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <div className="lg:w-3/4">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <div className="flex flex-col md:flex-row gap-6 mb-8">
+                <img 
+                  src="upload/galeri/hak.png"
+                  alt="EKİBİMİZ"
+                  className="w-full md:w-1/3 rounded-lg object-cover"
+                />
+                <div className="space-y-8">
+                  <h2 className="text-2xl font-bold text-primary">EKİBİMİZ</h2>
+                  
+                  {teamMembers.map((category, idx) => (
+                    <div key={idx} className="space-y-4">
+                      <h3 className="text-xl font-semibold text-primary-dark">
+                        {category.category}
+                      </h3>
+                      <div className="space-y-3">
+                        {category.members.map((member, memberIdx) => (
+                          <div key={memberIdx} className="flex items-start gap-2">
+                            <User className="w-5 h-5 mt-1 text-primary" />
+                            <div>
+                              <p className="font-semibold">{member.name}</p>
+                              <p className="text-gray-600">{member.title}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:w-1/4 space-y-6">
+            {/* Contact Information */}
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-primary mb-4 pb-2 border-b">
+                İletişim Bilgileri
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <item.icon className="w-5 h-5 mt-1 text-primary" />
+                    <span className="text-gray-700">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
