@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import PracticeAreas from "../components/PracticeAreas";
 import Team from "../components/Team";
-import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
@@ -11,7 +11,7 @@ const Index = () => {
       <Hero />
       <PracticeAreas />
       <Team />
-      <Contact />
+      <Footer />
     </div>
   );
 };
