@@ -11,7 +11,7 @@ const Hero = () => {
             Dedicated to providing exceptional legal services with integrity and professionalism
           </p>
           <a
-            href="#contact"
+            href="contact"
             className="inline-block bg-accent hover:bg-accent-light text-white font-bold py-3 px-8 rounded-md transition-colors"
           >
             Schedule a Consultation

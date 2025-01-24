@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const About = () => {
   return (
@@ -10,11 +11,13 @@ const About = () => {
             <p className="text-gray-600 mb-6">
               AYANA HUKUK BÜROSU Av. Gülten AYANA tarafından Ankara'da kurulmuştur. Ankara'da avukatlığa başlayan Gülten AYANA; inşaat, proje, enerji, elektrik taahhüt, akaryakıt, mimarlık, tarım, gıda ve turizm alanlarında kurumsal hukuk müşavirliği görevini yürütmektedir.
             </p>
-            <Button variant="outline">Devamını Oku</Button>
+            <Link to="/about">
+              <Button variant="outline">Devamını Oku</Button>
+            </Link>
           </div>
           <div className="md:w-1/2">
             <img 
-              src="https://ayana.av.tr/upload/galeri/kurumsal11.png" 
+              src="/pdfs/jpg/kurumsal11.png" 
               alt="Ayana Hukuk Bürosu" 
               className="rounded-lg shadow-lg"
             />

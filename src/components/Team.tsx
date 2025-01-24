@@ -1,4 +1,5 @@
-import { User, Users, Phone, Mail, MapPin } from "lucide-react";
+import { User, Phone, Mail, MapPin, Tablet, Printer } from "lucide-react";
+import { FaMapPin } from "react-icons/fa";
 
 const teamMembers = [
   {
@@ -43,10 +44,11 @@ const teamMembers = [
 ];
 
 const contactInfo = [
-  { icon: Phone, text: "0312 435 38 49 / 0312 433 66 23" },
-  { icon: Phone, text: "0533 068 55 16" },
+  { icon: Phone, text: "0312 433 66 23" },
+  { icon: Tablet, text: "0533 068 55 16" },
   { icon: Mail, text: "gultenayana@ayana.av.tr" },
-  { icon: MapPin, text: "Çukurambar Mah. Öğretmenler Cad. Kardelen Apt. No: 5/5 Çukurambar Ankara / TÜRKİYE" }
+  { icon: FaMapPin, text: "Çukurambar Mah. Öğretmenler Cad. Kardelen Apt. No: 5/5 Çukurambar Ankara / TÜRKİYE" },
+  { icon: Printer, text: "0312 435 38 49"},
 ];
 
 const Team = () => {
@@ -58,11 +60,6 @@ const Team = () => {
           <div className="lg:w-3/4">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
               <div className="flex flex-col md:flex-row gap-6 mb-8">
-                <img 
-                  src="upload/galeri/hak.png"
-                  alt="EKİBİMİZ"
-                  className="w-full md:w-1/3 rounded-lg object-cover"
-                />
                 <div className="space-y-8">
                   <h2 className="text-2xl font-bold text-primary">EKİBİMİZ</h2>
                   

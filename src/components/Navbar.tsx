@@ -23,7 +23,6 @@ const Navbar = () => {
             <Link to="/founding-lawyer" className="text-gray-700 hover:text-primary transition-colors">Kurucu Avukat</Link>
             <Link to="/team" className="text-gray-700 hover:text-primary transition-colors">Ekibimiz</Link>
             <Link to="/practice-areas" className="text-gray-700 hover:text-primary transition-colors">Çalışma Alanlarımız</Link>
-            <Link to="/specialties" className="text-gray-700 hover:text-primary transition-colors">Uzmanlık Alanlarımız</Link>
             <Link to="/articles" className="text-gray-700 hover:text-primary transition-colors">Y.Kararları - Makaleler</Link>
             <Link to="/contact" className="text-gray-700 hover:text-primary transition-colors">İletişim</Link>
           </div>
@@ -48,8 +47,7 @@ const Navbar = () => {
               <Link to="/kvkk" className="block px-3 py-2 text-gray-700 hover:text-primary">KVKK</Link>
               <Link to="/founding-lawyer" className="block px-3 py-2 text-gray-700 hover:text-primary">Kurucu Avukat</Link>
               <Link to="/team" className="block px-3 py-2 text-gray-700 hover:text-primary">Ekibimiz</Link>
-              <Link to="/practice-areas" className="block px-3 py-2 text-gray-700 hover:text-primary">Çalışma Alanlarımız</Link>
-              <Link to="/specialties" className="block px-3 py-2 text-gray-700 hover:text-primary">Uzmanlık Alanlarımız</Link>
+              <Link to="/practice-areas" className="block px-3 py-2 text-gray-700 hover:text-primary">Çalışma ve Uzmanlık Alanlarımız</Link>
               <Link to="/articles" className="block px-3 py-2 text-gray-700 hover:text-primary">Y.Kararları - Makaleler</Link>
               <Link to="/contact" className="block px-3 py-2 text-gray-700 hover:text-primary">İletişim</Link>
             </div>
